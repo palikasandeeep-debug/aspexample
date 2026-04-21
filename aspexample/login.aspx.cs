@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +12,18 @@ namespace aspexample
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack)
+            {
+                DataTable dt=new DataTable();
+                dt.Columns.Add("name");
+                dt.Columns.Add("email");
+                dt.Columns.Add("mvname");
+                dt.Columns.Add("show time");
+                dt.Columns.Add("add ons");
+                ViewState["movie"]=dt;
+                Bindgrid();
+
+            }
 
 
 
@@ -40,21 +52,29 @@ namespace aspexample
         {
             string snacks = "";
 
-            //foreach (ListItem item in checkadd.Items)
-            //{
-            //    if (item.Selected)
-            //    {
-            //        snacks += item.Text + ", ";
-            //    }
-            //}
+            foreach (ListItem item in checkadd.Items)
+            {
+                if (item.Selected)
+                {
+                    snacks += item.Text + ", ";
+                }
+            }
 
 
-            lblmsg.Text = " Your Movie Booking Deatils:" + "<br>" + "name:" + txtname.Text + "<br>" + "email:" + txtemail.Text + "<<br>" + "movie name: " + radiomv.SelectedValue +
-                "<br>" + "show Time: " + radioshow.SelectedValue + "<br>" + "snacks: " +snacks+
-                
-                "<br>"+"enjoy your movie😊";
-     
+            //lblmsg.Text = " Your Movie Booking Deatils:" + "<br>" + "name:" + txtname.Text + "<br>" + "email:" + txtemail.Text + "<<br>" + "movie name: " + radiomv.SelectedValue +
+            //    "<br>" + "show Time: " + radioshow.SelectedValue + "<br>" + "snacks: " +snacks+
 
+            //    "<br>"+"enjoy your movie😊";
+
+            DataTable dt = ViewState["movie"] as DataTable;
+            dt.Rows.Add(txtname.Text,txtemail.Text,radiomv.SelectedValue,radioshow.SelectedValue,snacks);
+            Bindgrid();
+
+        }
+        void Bindgrid()
+        {
+            gvmv.DataSource = ViewState["movie"] as DataTable;
+            gvmv.DataBind();
         }
     }
 }

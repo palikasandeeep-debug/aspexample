@@ -24,6 +24,51 @@ namespace aspexample
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// lblmsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmsg;
+
+        /// <summary>
+        /// lblmsg1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmsg1;
+
+        /// <summary>
+        /// lblmsg2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmsg2;
+
+        /// <summary>
+        /// lblmsg3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmsg3;
+
+        /// <summary>
+        /// lblmsg4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmsg4;
+
+        /// <summary>
         /// lblhead control.
         /// </summary>
         /// <remarks>
@@ -141,6 +186,51 @@ namespace aspexample
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revemail;
 
         /// <summary>
+        /// txtpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtpass;
+
+        /// <summary>
+        /// Rfvpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Rfvpass;
+
+        /// <summary>
+        /// txtcpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtcpass;
+
+        /// <summary>
+        /// Rfvcpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Rfvcpass;
+
+        /// <summary>
+        /// cvpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cvpass;
+
+        /// <summary>
         /// radiogen control.
         /// </summary>
         /// <remarks>
@@ -168,15 +258,6 @@ namespace aspexample
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
 
         /// <summary>
-        /// lblmsg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblmsg;
-
-        /// <summary>
         /// btnsubmit control.
         /// </summary>
         /// <remarks>
@@ -184,5 +265,14 @@ namespace aspexample
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnsubmit;
+
+        /// <summary>
+        /// gvperson control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvperson;
     }
 }

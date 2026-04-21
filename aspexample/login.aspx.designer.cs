@@ -69,15 +69,6 @@ namespace aspexample
         protected global::System.Web.UI.WebControls.CheckBoxList checkadd;
 
         /// <summary>
-        /// chkm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkm;
-
-        /// <summary>
         /// btnbook control.
         /// </summary>
         /// <remarks>
@@ -87,12 +78,12 @@ namespace aspexample
         protected global::System.Web.UI.WebControls.Button btnbook;
 
         /// <summary>
-        /// lblmsg control.
+        /// gvmv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblmsg;
+        protected global::System.Web.UI.WebControls.GridView gvmv;
     }
 }

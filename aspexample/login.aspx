@@ -53,25 +53,22 @@
     </td>
 </tr>
 
-                <tr>
-                    <td>
-          <asp:CheckBox ID="chkm" runat="server" Text="movie" />
-                    </td>
-                </tr>
-                 <tr>
+               
+                 
 
-
-                <tr>
+                     <tr>
                     <td>
                  <asp:Button ID="btnbook" runat="server" Text="Book" OnClick="btnbook_Click" />
                     </td>
                 </tr>
-                 <tr>
-     <td>
+                
+    <%-- 
+        <td>
 <asp:Label ID="lblmsg" runat="server"></asp:Label>
      </td>
- </tr>
+ </tr>--%>
 
+                <asp:GridView ID="gvmv" runat="server" AutoGenerateColumns="true"></asp:GridView>
                 
             </table>
         </div>

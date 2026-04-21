@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,8 +17,89 @@ namespace aspexample
             //{
             //    btnadd.Enabled = false;
             //}
+            lblmsg3.Text = "hi page load event <br>";
+            btnsubmit.Visible = false;
+
+            if(!IsPostBack)
+            {
+                DataTable dt=new DataTable();
+                dt.Columns.Add("Fistname");
+                dt.Columns.Add("Lastname");
+                dt.Columns.Add("mobile");
+                dt.Columns.Add("email");
+                dt.Columns.Add("password");
+                dt.Columns.Add("cpassword");
+                dt.Columns.Add("gender");
+                ViewState["person"] = dt;
+                BindGrid();
+
+            }
 
         }
+        protected void Page_PreInIT(object sender, EventArgs e)
+        {
+            lblmsg.Text = "pre init event <br>";
+
+        }
+        protected void Page_InIT(object sender, EventArgs e)
+        {
+            lblmsg1.Text = " init event <br>";
+
+        }
+        protected void Page_InITComplete(object sender, EventArgs e)
+        {
+            lblmsg2.Text = " initComplete event <br>";
+
+        }
+        protected void Page_LoadComplete(object sender, EventArgs e)
+        {
+            lblmsg4.Text = "page load complete <br>";
+
+        }
+        //protected void txtfname_TextChanged(object sender, EventArgs e)
+        //{
+        //    if (txtfname.Text.Length > 2)
+        //    {
+        //        btnsubmit.Visible = true;
+        //    }
+        //}
+        protected void btnsubmit_Click(object sender, EventArgs e)
+        {
+        
+            DataTable dt = ViewState["person"] as DataTable;
+            dt.Rows.Add(txtfname.Text,txtlname.Text,txtmob.Text,txtemail.Text,txtpass.Text,txtcpass.Text,radiogen.SelectedValue);
+            ViewState["person"]=dt;
+            BindGrid();
+            txtcpass.Text = "";
+            txtemail.Text = "";
+            txtfname.Text = "";
+            txtlname.Text = "";
+            txtmob.Text = "";
+            txtpass.Text = "";
+            radiogen.SelectedIndex = -1;
+      
+            
+
+            
+
+        }
+        
+        void BindGrid()
+        {
+            gvperson.DataSource = ViewState["person"] as DataTable;
+            gvperson.DataBind();
+           
+
+        }
+
+        protected void txtfname_TextChanged1(object sender, EventArgs e)
+        {
+            if (txtfname.Text.Length > 2)
+            {
+                btnsubmit.Visible = true;
+            }
+        }
+
 
         //protected void btnsubmit_Click(object sender, EventArgs e)
         //{
@@ -129,5 +211,6 @@ namespace aspexample
         //    }
 
         //}
+
     }
 }
