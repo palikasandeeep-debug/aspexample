@@ -8,12 +8,52 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+    <div>
+            
+                       <%--<table align="center">
+   <tr>
+       <td>
+    <asp:Label ID="lblmsg" runat="server"></asp:Label>
+</td>
+       </tr>
+                  <tr>
+       <td>
+    <asp:Label ID="lblmsg1" runat="server"></asp:Label>
+</td>
+       </tr>
+                  <tr>
+       <td>
+    <asp:Label ID="lblmsg2" runat="server"></asp:Label>
+</td>
+       </tr>
+                  <tr>
+       <td>
+    <asp:Label ID="lblmsg3" runat="server"></asp:Label>
+</td>
+       </tr>
+                  <tr>
+       <td>
+    <asp:Label ID="lblmsg4" runat="server"></asp:Label>
+</td>
+       </tr>
+
+
+
+
+
+       </table>
+           <table align="center">
+               <tr>
+                   <td>
+                       <asp:Label ID="lblhead" runat="server">Person Information</asp:Label>
+                   </td>
+               </tr>
+           </table>
             <table align="center">
 
                  <tr>
      <td>
-     enter name <asp:TextBox ID="txtname" runat="server"  ></asp:TextBox>
+     enter name <asp:TextBox ID="txtname" runat="server" AutoPostBack="true" OnTextChanged="tstfname_textchanged"  ></asp:TextBox>
      </td>
  </tr>
                 
@@ -66,11 +106,15 @@
         <td>
 <asp:Label ID="lblmsg" runat="server"></asp:Label>
      </td>
- </tr>--%>
+ </tr>
 
                 <asp:GridView ID="gvmv" runat="server" AutoGenerateColumns="true"></asp:GridView>
                 
-            </table>
+            </table>--%>
+
+
+        <asp:Label ID="lblmsg" runat="server"></asp:Label>
+        <asp:Button ID="btnsub" runat="server" Text="submit" OnClick="btnsub_click" />
         </div>
     </form>
 </body>
