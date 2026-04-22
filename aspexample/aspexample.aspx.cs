@@ -14,14 +14,50 @@ namespace aspexample
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            HttpCookie cookie = Request.Cookies["userinfo"];
-            if (cookie != null) 
+            if (!IsPostBack)
             {
-               
-                lblfmsg.Text = cookie["Username"];
-                lblpmsg.Text = cookie["Password"];
-
+                if (Session["fistname"] == null && Session["password"]==null)
+                {
+                    Session["fistname"] = "Abc";
+                    Session["password"] = "123";
+                    lblstring.Text = "Well come :" + Session["fistname"] + Session["password"];
+                    
+                }
+                else
+                {
+                    lblstring.Text = Session["fistname"] + " " + Session["password"];
+                    lblfmsg.Text = Session["fistname"].ToString();
+                    lblpmsg.Text = Session["password"].ToString();
+                }
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //HttpCookie cookie = Request.Cookies["userinfo"];
+            //if (cookie != null) 
+            //{
+               
+            //    lblfmsg.Text = cookie["Username"];
+            //    lblpmsg.Text = cookie["Password"];
+
+            //}
 
 
 

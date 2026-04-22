@@ -162,9 +162,13 @@ enter  confirm password <asp:TextBox ID="txtcpass" runat="server" TextMode="Pass
     </tr>
           <asp:GridView ID="gvperson" runat="server" AutoGenerateColumns="true"></asp:GridView>
 </table>--%> 
-                  <h2>Deafault.aspx</h2>
-                  <asp:Label ID="lblfmsg" runat="server" Text="label"></asp:Label>
-                  <asp:Label ID="lblpmsg" runat="server"></asp:Label>
+                  <h5>well come </h5> 
+                  <asp:Label ID="lblstring" runat="server"></asp:Label><br /><br />
+                  
+              your name:   <asp:Label ID="lblfmsg" runat="server" Text="your fist name"></asp:Label><br /><br />
+
+
+                password:  <asp:Label ID="lblpmsg" runat="server" Text ="your password"></asp:Label>
        </div>
     </form>
 </body>

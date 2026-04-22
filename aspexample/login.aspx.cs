@@ -37,12 +37,29 @@ namespace aspexample
 
         protected void btnsub_Click(object sender, EventArgs e)
         {
-            HttpCookie usercookie = new HttpCookie("userinfo");
-            usercookie["Username"]="Name:"+txtname.Text;
-            usercookie["Password"]="password :"+txtpass.Text;
-            usercookie.Expires = DateTime.Now.AddSeconds(30);
-            Response.Cookies.Add(usercookie);
+
+            Session["fistname"]=txtname.Text;
+            Session["password"]=txtpass.Text;
             Response.Redirect("aspexample.aspx");
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //HttpCookie usercookie = new HttpCookie("userinfo");
+            //usercookie["Username"]="Name:"+txtname.Text;
+            //usercookie["Password"]="password :"+txtpass.Text;
+            //usercookie.Expires = DateTime.Now.AddSeconds(30);
+            //Response.Cookies.Add(usercookie);
+            //Response.Redirect("aspexample.aspx");
 
 
 
