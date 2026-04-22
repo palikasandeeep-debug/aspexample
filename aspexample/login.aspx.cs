@@ -26,24 +26,30 @@ namespace aspexample
 
             //}
             //btnbook.Visible = false;
-            if(!IsPostBack)
-            {
-                ViewState["clickcount"] = 0;
-            }
+            //if(!IsPostBack)
+            //{
+            //    ViewState["clickcount"] = 0;
+            //}
 
 
 
         }
 
-        protected void btnsub_click(object sender, EventArgs e)
+        protected void btnsub_Click(object sender, EventArgs e)
         {
 
-            int count = (int)ViewState["clickcount"];
-            count++;
-            ViewState["clickcount"]=count;
-            lblmsg.Text = "click counts" + count;
-
+            Response.Redirect("aspexample.aspx?firstname= "+txtname.Text+" " +"&password="+txtpass.Text);
         }
+
+        //protected void btnsub_click(object sender, EventArgs e)
+        //{
+
+        //    int count = (int)ViewState["clickcount"];
+        //    count++;
+        //    ViewState["clickcount"]=count;
+        //    lblmsg.Text = "click counts" + count;
+
+        //}
         //protected void Page_PreInIT(object sender, EventArgs e)
         //{
         //    lblmsg.Text = "pre init event <br>";
@@ -119,5 +125,9 @@ namespace aspexample
         //    gvmv.DataSource = ViewState["movie"] as DataTable;
         //    gvmv.DataBind();
         //}
+
+
+
+
     }
 }

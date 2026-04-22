@@ -113,8 +113,14 @@
             </table>--%>
 
 
-        <asp:Label ID="lblmsg" runat="server"></asp:Label>
-        <asp:Button ID="btnsub" runat="server" Text="submit" OnClick="btnsub_click" />
+      <%--<asp:Label ID="lblmsg" runat="server"></asp:Label>
+        <asp:Button ID="btnsub" runat="server" Text="submit" OnClick="btnsub_click" />--%> 
+
+
+
+       enter name<asp:TextBox ID="txtname" runat="server"></asp:TextBox><br />
+        enter password<asp:TextBox ID="txtpass" runat="server"></asp:TextBox><br />
+        <asp:Button ID="btnsub" runat="server" Text="Submit" OnClick="btnsub_Click" />
         </div>
     </form>
 </body>

@@ -11,7 +11,7 @@
               <div>
 
                   
-                             <table align="center">
+                            <%--<table align="center">
    <tr>
        <td>
     <asp:Label ID="lblmsg" runat="server"></asp:Label>
@@ -150,7 +150,7 @@ enter  confirm password <asp:TextBox ID="txtcpass" runat="server" TextMode="Pass
                        <asp:Label ID="lblmsg" runat="server" ForeColor="Beige" BackColor="Blue"></asp:Label>
                    </td>
                </tr>
-           </table>--%>
+           </table>
 
 
          
@@ -161,7 +161,8 @@ enter  confirm password <asp:TextBox ID="txtcpass" runat="server" TextMode="Pass
         </td>
     </tr>
           <asp:GridView ID="gvperson" runat="server" AutoGenerateColumns="true"></asp:GridView>
-</table>
+</table>--%> 
+                  <asp:Label ID="lblmsg" runat="server" Text="label"></asp:Label>
        </div>
     </form>
 </body>
