@@ -13,9 +13,25 @@ namespace aspexample
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string firstname=Request.QueryString["firstname"];
-            string password=Request.QueryString["password"];
-            lblmsg.Text = "well come" + firstname + " " + password;
+
+            HttpCookie cookie = Request.Cookies["userinfo"];
+            if (cookie != null) 
+            {
+               
+                lblfmsg.Text = cookie["Username"];
+                lblpmsg.Text = cookie["Password"];
+
+            }
+
+
+
+
+
+
+
+            //string firstname=Request.QueryString["firstname"];
+            //string password=Request.QueryString["password"];
+            //lblmsg.Text = "well come" + firstname + " " + password;
 
 
 
