@@ -12,11 +12,19 @@ namespace aspexample
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["clickcount"]==null)
-            {
-                Session["clickcount"] = 0;
-            }
-            lblcount.Text="click counts" + Session["Clickcount"].ToString();
+            int cureentcount = (int)Application["Usercount"];
+            lblmsg.Text = "user count"+cureentcount.ToString();
+
+
+
+
+
+
+            //if (Session["clickcount"]==null)
+            //{
+            //    Session["clickcount"] = 0;
+            //}
+            //lblcount.Text="click counts" + Session["Clickcount"].ToString();
 
 
 
@@ -80,14 +88,14 @@ namespace aspexample
             //Response.Redirect("aspexample.aspx?firstname= " + txtname.Text + " " + "&password=" + txtpass.Text);
         //}
 
-        protected void btnsub_Click1(object sender, EventArgs e)
-        {
-            int count = (int)Session["clickcount"];
-            count++;
-            Session["clickcount"] = count;
-            lblcount.Text = "click count" + Session["clickcount"].ToString();
+        //protected void btnsub_Click1(object sender, EventArgs e)
+        //{
+        //    int count = (int)Session["clickcount"];
+        //    count++;
+        //    Session["clickcount"] = count;
+        //    lblcount.Text = "click count" + Session["clickcount"].ToString();
 
-        }
+        //}
 
         //protected void btnsub_click(object sender, EventArgs e)
         //{

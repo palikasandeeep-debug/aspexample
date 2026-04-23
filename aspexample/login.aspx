@@ -121,9 +121,10 @@
       <%--enter name<asp:TextBox ID="txtname" runat="server"></asp:TextBox><br />
         enter password<asp:TextBox ID="txtpass" runat="server"></asp:TextBox><br />
         <asp:Button ID="btnsub" runat="server" Text="Submit" OnClick="btnsub_Click" />--%>
-        <asp:Label ID="label" runat="server"></asp:Label>
+        <%--<asp:Label ID="label" runat="server"></asp:Label>
         <asp:Button ID="btnsub" runat="server" Text="Submit" OnClick="btnsub_Click1" />
-        <asp:Label ID="lblcount" runat="server"></asp:Label>
+        <asp:Label ID="lblcount" runat="server"></asp:Label>--%>
+        <asp:Label ID="lblmsg" runat="server" Text="count"></asp:Label>
         </div>
     </form>
 </body>
